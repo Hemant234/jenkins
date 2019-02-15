@@ -6,7 +6,7 @@ node() {
 	stage('setup'){
 	powershell 'pwd'
 	//writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
-	shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
+	shortCommit = bat(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 	//bat ''' 
 	//cd  C:\Build files
 	//mkdir 
