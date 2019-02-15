@@ -4,6 +4,6 @@ node() {
  	checkout scm	
 	}
 	stage('setup'){
-	powershell ' pwd"
+	powershell 'pwd'
 	}
 }
