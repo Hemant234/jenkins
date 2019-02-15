@@ -6,7 +6,7 @@ node() {
 	stage('setup'){
 	powershell 'pwd'
 	
-	shortCommit = bat(returnStdout: true, script: "git log")
-	println shortCommit
+	shortCommit = bat(returnStdout: true, script: "git log").trim()
+	prinnyln shortCommit
 	}
 }
