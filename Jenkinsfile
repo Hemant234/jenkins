@@ -7,6 +7,6 @@ node() {
 	powershell 'pwd'
 	
 	shortCommit = bat(returnStdout: true, script: "git log ")
-	print(shortCommit)
+	println shortCommit
 	}
 }
