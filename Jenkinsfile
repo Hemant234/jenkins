@@ -1,7 +1,10 @@
 node('ubuntu') {
 	
  	stage('checkout'){
- 	checkout scm	
+ 	git(
+       url: 'git@github.com:Hemant234/jenkins.git',
+       credentialsId: 'd5810384-46fe-4a24-a05b-0f7eefcea946',
+       ) 
 	}
 	stage('setup'){
 	powershell 'pwd'
