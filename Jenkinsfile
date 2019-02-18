@@ -13,7 +13,10 @@ node() {
 	{
 	shortCommit = bat(returnStdout: true, script: "git log -1")
 	writeFile file: "Commitversion.txt", text: "$shortCommit"
+	bat 'xcopy /s  "C:\Program Files (x86)\Jenkins\workspace\Build_machine pull"  "%date%"'
 	}
+	 
+	
 	
 	}
 }
