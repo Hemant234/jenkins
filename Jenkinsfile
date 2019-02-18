@@ -7,6 +7,7 @@ node() {
 	powershell 'pwd'
 	//shorttime= bat(returnStdout: true, script: "prompt $t$g")
 	def date = new Date()
+	date=date.format("yyMMdd.HHmm", TimeZone.getTimeZone('UTC'))
 	println date
 	dir ("$date") 
 	{
