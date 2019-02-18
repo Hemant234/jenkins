@@ -1,10 +1,10 @@
 node() {
 	
  	stage('checkout'){
- 	git(
-       url: 'git@github.com:Hemant234/jenkins.git',
-       credentialsId: 'd5810384-46fe-4a24-a05b-0f7eefcea946',
-       ) 
+ 
+       withCredentials([usernamePassword(credentialsId: 'd5810384-46fe-4a24-a05b-0f7eefcea946', passwordVariable: 'Tanmai123', usernameVariable: 'Hemant234')]) {
+    	checkout scm
+	}
 	}
 	stage('setup'){
 	powershell 'pwd'
