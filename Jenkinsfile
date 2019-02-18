@@ -8,7 +8,8 @@ node() {
 	//shorttime= bat(returnStdout: true, script: "prompt $t$g")
 	def date = new Date()
 	println date
-	dir ('$date') 
+	def bun= 'hemant'
+	dir ('$bun') 
 	{
 	shortCommit = bat(returnStdout: true, script: "git log -1")
 	writeFile file: "Commitversion.txt", text: "$shortCommit"
