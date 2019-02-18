@@ -1,10 +1,7 @@
 node() {
 	
- 	stage('checkout'){
- 
-       withCredentials([usernamePassword(credentialsId: 'd5810384-46fe-4a24-a05b-0f7eefcea946', passwordVariable: 'Tanmai123', usernameVariable: 'Hemant234')]) {
+ 	stage('checkout'){      
     	checkout scm
-	}
 	}
 	stage('setup'){
 	powershell 'pwd'
