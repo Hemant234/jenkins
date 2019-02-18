@@ -6,6 +6,7 @@ node() {
 	stage('setup'){
 	powershell 'pwd'
 	//shorttime= bat(returnStdout: true, script: "prompt $t$g")
+	echo "TimeStamp: ${currentBuild.startTimeInMillis}"
 	dir ('shorttime') {
         writeFile file:'dummy', text:''
 	shortCommit = bat(returnStdout: true, script: "git log -1")
