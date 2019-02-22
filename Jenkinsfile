@@ -19,8 +19,8 @@ node('') {
 	writeFile file: "Commitversion.txt", text: "$shortCommit"
 	bat 'xcopy   "C:/Program Files (x86)/Jenkins/workspace/Build_machine pull"'
 	}
-	 
-	
-	
+	workspace_env= env.WORKSPACE
+	dir("$workspace_env"){
+	bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a''' 
 	}
 }
