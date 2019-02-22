@@ -23,4 +23,5 @@ node('') {
 	dir("$workspace_env"){
 	bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a''' 
 	}
+  }
 }
