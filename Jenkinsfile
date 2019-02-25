@@ -18,10 +18,14 @@ node('') {
 	{
 	shortCommit = bat(returnStdout: true, script: "git log -1")
 	writeFile file: "Commitversion.txt", text: "$shortCommit"
-	bat "xcopy $workspace_env"
+	bat 'xcopy "C:\Program Files (x86)\Jenkins\workspace\Build_machine pull"'
 	}
 	dir("$workspace_env"){
 	bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a''' 
 	}
   }
+  	stage('Push_into_sharedfolder'){
+	bat'''pushd \\WTIN05203457L\Users\SESA528096\Desktop\webhook_trial
+	Robocopy "C:\Program Files (x86)\Jenkins\workspace\Build_machine pull" %cd% /S /MOVE
+	'''
 }
