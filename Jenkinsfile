@@ -25,7 +25,7 @@ node('') {
 	}
   }
   	stage('Push_into_sharedfolder'){
-	bat'''pushd "//WTIN05203457L/Users/SESA528096/Desktop/webhook_trial"
+	bat'''pushd "Y:/SESA528096/Desktop/webhook_trial"
 	Robocopy "C:/Program Files (x86)/Jenkins/workspace/Build_machine pull" %cd% /S /MOVE
 	'''
 	}
