@@ -26,7 +26,6 @@ node('') {
   }
   	stage('Push_into_sharedfolder'){
 		
-	  bat '''call move.bat'''
 	  bat 'Robocopy "C:/Program Files (x86)/Jenkins/workspace/Build_machine pull" "Y:/SESA528096/Desktop/webhook_trial" /S /MOVE '
 	}
 }
