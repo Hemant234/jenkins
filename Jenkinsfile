@@ -26,7 +26,7 @@ node('') {
   }
   	stage('Push_into_sharedfolder'){
 	//dir('Y:/SESA528096/Desktop/webhook_trial')
-	  powershell'''PS> Start-Process powershell -Verb runAs
+	  powershell''' Start-Process powershell -Verb runAs
 	  pushd //WTIN05203457L/Users/SESA528096/Desktop/webhook_trial
 	  	mkdir "hemant"
 	      '''
