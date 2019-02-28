@@ -28,3 +28,4 @@ node('') {
 		
 	  bat '''call move.bat'''
 	}
+}
