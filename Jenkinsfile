@@ -27,7 +27,7 @@ node('') {
   	withCredentials([usernamePassword(credentialsId: '26c99b59-2f80-4529-b868-60d51524b02e', passwordVariable: 'CREDS_P', usernameVariable: 'CREDS_U')]) {
     bat """
      
-         net use \\WTIN05203457L\\Users\\SESA528096\\Desktop\\webhook_trial /u:%CREDS_U% %CREDS_P%
+         net use \\WTIN05203457L\\Users /u:%CREDS_U% %CREDS_P%
         REM copy data...
     """
 }
