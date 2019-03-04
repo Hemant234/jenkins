@@ -23,7 +23,7 @@ node('') {
 	dir("$workspace_env"){
 	bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a''' 
 	}
-  }
+  }	
   	withCredentials([usernamePassword(credentialsId: 'afe796d1-68d5-46ff-a843-fef797fd627d', passwordVariable: 'CREDS_P', usernameVariable: 'CREDS_U')]) {
     bat """
         net use  \\WTIN05203457L\Users /u:%CREDS_U% %CREDS_P%
