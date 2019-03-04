@@ -26,7 +26,7 @@ node('') {
   }	
   	withCredentials([usernamePassword(credentialsId: '26c99b59-2f80-4529-b868-60d51524b02e', passwordVariable: 'CREDS_P', usernameVariable: 'CREDS_U')]) {
     bat """
-     
+     	 push Z:\\SESA528096\\Desktop\\abc
          net use \\\\WTIN05203457L\\Users\\SESA528096\\Desktop\\abc /u:%CREDS_U% %CREDS_P%
         REM copy data...
     """
