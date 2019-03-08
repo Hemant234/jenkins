@@ -51,5 +51,6 @@ notifyBuild('SUCCESSFUL')
 
   // Send notifications
   slackSend (color: colorCode, message: summary)
+	}
 }
 }
