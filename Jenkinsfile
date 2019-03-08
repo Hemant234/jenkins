@@ -26,7 +26,11 @@ node('') {
   }
 	
 notifyBuild('SUCCESSFUL')
-	def notifyBuild(String buildStatus = 'STARTED') {
+	
+
+}
+
+def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
   buildStatus =  buildStatus ?: 'SUCCESSFUL'
 
@@ -51,5 +55,3 @@ notifyBuild('SUCCESSFUL')
   // Send notifications
   slackSend (color: colorCode, message: summary)
 	}
-
-}
